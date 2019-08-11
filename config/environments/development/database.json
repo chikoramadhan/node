@@ -2,13 +2,17 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-hook-bookshelf",
+      "connector": "strapi-hook-mongoose",
       "settings": {
-        "client": "sqlite",
-        "filename": ".tmp/data.db"
+        "client": "mongo",
+        "host": "cluster0-shard-00-00-mhzli.mongodb.net:27017,cluster0-shard-00-01-mhzli.mongodb.net:27017,cluster0-shard-00-02-mhzli.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true",
+        "port": 27017,
+        "database": "cluster0",
+        "username": "chiko",
+        "password": "chikoramadhan"
       },
       "options": {
-        "useNullAsDefault": true
+        "ssl": true
       }
     }
   }
