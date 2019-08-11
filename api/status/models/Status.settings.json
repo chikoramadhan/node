@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "statuses",
+  "info": {
+    "name": "status",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Title": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "orders": {
+      "collection": "order",
+      "via": "status"
+    }
+  }
+}

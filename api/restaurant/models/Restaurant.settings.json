@@ -1,0 +1,45 @@
+{
+  "connection": "default",
+  "collectionName": "restaurants",
+  "info": {
+    "name": "restaurant",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "restaurant": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "menus": {
+      "collection": "menu",
+      "via": "restaurant"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Latitude": {
+      "type": "string"
+    },
+    "Longitude": {
+      "type": "string"
+    },
+    "Open": {
+      "type": "date"
+    },
+    "Close": {
+      "type": "date"
+    }
+  }
+}

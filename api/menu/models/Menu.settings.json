@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "menus",
+  "info": {
+    "name": "menu",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Title": {
+      "required": true,
+      "type": "string"
+    },
+    "Price": {
+      "type": "biginteger",
+      "min": 1,
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "categories": {
+      "collection": "category",
+      "dominant": true,
+      "via": "menus"
+    },
+    "restaurant": {
+      "model": "restaurant",
+      "via": "menus"
+    }
+  }
+}
